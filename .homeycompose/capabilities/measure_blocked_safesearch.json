@@ -1,0 +1,13 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Enforced SafeSearch",
+    "nl": "Afgedwongen SafeSearch"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/safesearch.svg"
+}

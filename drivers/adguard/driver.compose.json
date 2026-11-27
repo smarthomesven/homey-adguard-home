@@ -5,11 +5,19 @@
   "class": "service",
   "capabilities": [
     "protection",
-    "total_queries",
-    "blocked_filtering",
-    "blocked_adult",
-    "blocked_malware",
-    "blocked_safesearch"
+    "filtering_enabled",
+    "parental_enabled",
+    "safesearch_enabled",
+    "safebrowsing_enabled",
+    "querylog_enabled",
+    "measure_dns_queries",
+    "measure_blocked_filtering",
+    "measure_blocked_ratio",
+    "measure_blocked_parental",
+    "measure_blocked_safebrowsing",
+    "measure_blocked_safesearch",
+    "measure_processing_time",
+    "measure_rules_count"
   ],
   "platforms": [
     "local"
@@ -22,6 +30,36 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
   },
+  "settings": [
+    {
+      "id": "poll_interval",
+      "type": "number",
+      "label": {
+        "en": "Polling interval",
+        "nl": "Polling-interval"
+      },
+      "hint": {
+        "en": "How often Homey fetches the status and statistics from AdGuard Home.",
+        "nl": "Hoe vaak Homey de status en statistieken van AdGuard Home ophaalt."
+      },
+      "value": 10,
+      "min": 5,
+      "max": 300,
+      "units": {
+        "en": "seconds",
+        "nl": "seconden"
+      }
+    },
+    {
+      "id": "adguard_version",
+      "type": "label",
+      "label": {
+        "en": "AdGuard Home version",
+        "nl": "AdGuard Home-versie"
+      },
+      "value": "-"
+    }
+  ],
   "pair": [
     {
       "id": "ip"

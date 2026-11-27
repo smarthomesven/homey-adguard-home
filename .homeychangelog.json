@@ -85,5 +85,9 @@
   },
   "1.3.5": {
     "en": "Update dependencies"
+  },
+  "1.4.0": {
+    "en": "New: switches for filter lists, parental control, safe search, safe browsing and query log; blocked ratio, processing time and rule count sensors; statistics can be used as status indicator; flow cards to pause protection, block/allow domains, manage custom rules and filter lists, check if a domain is blocked and reset statistics; polling interval setting. Fixed: protection triggers, counter triggers, multiple servers, servers without login.",
+    "nl": "Nieuw: schakelaars voor filterlijsten, ouderlijk toezicht, veilig zoeken, veilig browsen en querylog; sensoren voor percentage geblokkeerd, verwerkingstijd en aantal regels; statistieken bruikbaar als statusindicator; flowkaarten om bescherming te pauzeren, domeinen te blokkeren/toe te staan, eigen regels en filterlijsten te beheren, te controleren of een domein geblokkeerd is en statistieken te resetten; instelbaar polling-interval. Opgelost: beschermingstriggers, tellertriggers, meerdere servers, servers zonder login."
   }
 }

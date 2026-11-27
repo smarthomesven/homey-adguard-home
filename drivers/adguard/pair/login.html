@@ -68,24 +68,19 @@
             }, (err, result) => {
               if (err) {
                 console.error(err);
-                if (err.message && err.message.includes('already added')) {
-                  saveBtn.className = 'homey-button-primary-full';
-                  saveBtn.textContent = 'Login';
-                  duplicatedevice.style.display = 'block';
-                } else {
-                  saveBtn.className = 'homey-button-primary-full';
-                  saveBtn.textContent = 'Login';
-                  unexpectederror.style.display = 'block';
-                }
+                failedElement.textContent = err.message || String(err);
+                failedElement.style.display = 'block';
+                setSave();
                 return;
               }
               Homey.done();
             });
           }
+        }).catch(function (error) {
+          console.error("Error during login event:", error);
+          failedElement.style.display = 'block';
+          setSave();
         });
-      }).catch(function (error) {
-        console.error("Error during login event:", error);
-        setSave();
       });
       function setSave() {
         saveBtn.className = 'homey-button-primary-full';

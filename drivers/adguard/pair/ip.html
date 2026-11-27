@@ -49,7 +49,27 @@
           if (result === false) {
             errorElement.style.display = 'block';
             setSave();
+          } else if (result && typeof result === 'object') {
+            // Server has no authentication: add the device directly
+            Homey.addDevice({
+              data: { ip: result.ip },
+              store: { ip: result.ip, baseUrl: result.baseUrl },
+              name: result.ip
+            }, function (err) {
+              if (err) {
+                console.error(err);
+                errorElement.textContent = err.message || String(err);
+                errorElement.style.display = 'block';
+                setSave();
+                return;
+              }
+              Homey.done();
+            });
           }
+        }).catch(function (error) {
+          console.error(error);
+          errorElement.style.display = 'block';
+          setSave();
         });
       });
       function setSave() {

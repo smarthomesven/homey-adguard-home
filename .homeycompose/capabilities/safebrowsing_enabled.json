@@ -1,0 +1,11 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Safe browsing",
+    "nl": "Veilig browsen"
+  },
+  "uiComponent": "toggle",
+  "getable": true,
+  "setable": true,
+  "icon": "/assets/malware.svg"
+}

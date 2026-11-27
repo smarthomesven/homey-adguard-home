@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Blocked ratio",
+    "nl": "Percentage geblokkeerd"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "units": "%",
+  "decimals": 1,
+  "min": 0,
+  "max": 100,
+  "icon": "/assets/filtering.svg"
+}

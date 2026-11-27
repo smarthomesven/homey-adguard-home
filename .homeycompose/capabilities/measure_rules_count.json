@@ -1,0 +1,13 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Active filter rules",
+    "nl": "Actieve filterregels"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/filtering.svg"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Average processing time",
+    "nl": "Gemiddelde verwerkingstijd"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "units": "ms",
+  "decimals": 1,
+  "icon": "/assets/total.svg"
+}
