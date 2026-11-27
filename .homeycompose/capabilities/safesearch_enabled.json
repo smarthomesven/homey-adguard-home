@@ -1,0 +1,11 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Safe search",
+    "nl": "Veilig zoeken"
+  },
+  "uiComponent": "toggle",
+  "getable": true,
+  "setable": true,
+  "icon": "/assets/safesearch.svg"
+}

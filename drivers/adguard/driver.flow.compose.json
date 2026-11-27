@@ -1,78 +1,720 @@
 {
   "triggers": [
     {
-      "id": "blocked_adult_changed",
+      "id": "total_queries_changed",
       "title": {
-        "en": "Blocked parental controls changed",
-        "nl": "Geblokkeerd ouderlijk toezicht veranderd"
-      }
+        "en": "DNS queries changed",
+        "nl": "DNS-verzoeken veranderd"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "DNS queries",
+            "nl": "DNS-verzoeken"
+          },
+          "example": 42
+        }
+      ]
     },
     {
       "id": "blocked_filtering_changed",
       "title": {
-        "en": "Blocked filtering changed",
-        "nl": "Geblokkeerd filtering veranderd"
-      }
+        "en": "Blocked by filters changed",
+        "nl": "Geblokkeerd door filters veranderd"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Blocked by filters",
+            "nl": "Geblokkeerd door filters"
+          },
+          "example": 42
+        }
+      ]
+    },
+    {
+      "id": "blocked_adult_changed",
+      "title": {
+        "en": "Blocked parental controls changed",
+        "nl": "Geblokkeerd ouderlijk toezicht veranderd"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Blocked parental controls",
+            "nl": "Geblokkeerd ouderlijk toezicht"
+          },
+          "example": 42
+        }
+      ]
     },
     {
       "id": "blocked_malware_changed",
       "title": {
         "en": "Blocked malware/phishing changed",
         "nl": "Geblokkeerd malware/phishing veranderd"
-      }
-    },
-    {
-      "id": "total_queries_changed",
-      "title": {
-        "en": "Total requests changed",
-        "nl": "Totale verzoeken veranderd"
-      }
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Blocked malware/phishing",
+            "nl": "Geblokkeerd malware/phishing"
+          },
+          "example": 42
+        }
+      ]
     },
     {
       "id": "blocked_safesearch_changed",
       "title": {
-        "en": "Blocked SafeSearch changed",
-        "nl": "Geblokkeerd SafeSearch veranderd"
-      }
+        "en": "Enforced SafeSearch changed",
+        "nl": "Afgedwongen SafeSearch veranderd"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Enforced SafeSearch",
+            "nl": "Afgedwongen SafeSearch"
+          },
+          "example": 42
+        }
+      ]
+    },
+    {
+      "id": "blocked_ratio_changed",
+      "title": {
+        "en": "Blocked ratio changed",
+        "nl": "Percentage geblokkeerd veranderd"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Blocked ratio (%)",
+            "nl": "Percentage geblokkeerd (%)"
+          },
+          "example": 42
+        }
+      ]
     },
     {
       "id": "protection_enabled",
       "title": {
-        "en": "Filtering enabled",
-        "nl": "Filtering ingeschakeld"
+        "en": "Protection enabled",
+        "nl": "Bescherming ingeschakeld"
       }
     },
     {
       "id": "protection_disabled",
       "title": {
-        "en": "Filtering disabled",
-        "nl": "Filtering uitgeschakeld"
+        "en": "Protection disabled",
+        "nl": "Bescherming uitgeschakeld"
       }
+    },
+    {
+      "id": "feature_turned_on",
+      "title": {
+        "en": "A feature was turned on",
+        "nl": "Een functie is ingeschakeld"
+      },
+      "titleFormatted": {
+        "en": "[[feature]] was turned on",
+        "nl": "[[feature]] is ingeschakeld"
+      },
+      "args": [
+        {
+          "type": "dropdown",
+          "name": "feature",
+          "title": {
+            "en": "Feature",
+            "nl": "Functie"
+          },
+          "values": [
+            {
+              "id": "filtering",
+              "title": {
+                "en": "Filter lists",
+                "nl": "Filterlijsten"
+              }
+            },
+            {
+              "id": "parental",
+              "title": {
+                "en": "Parental control",
+                "nl": "Ouderlijk toezicht"
+              }
+            },
+            {
+              "id": "safesearch",
+              "title": {
+                "en": "Safe search",
+                "nl": "Veilig zoeken"
+              }
+            },
+            {
+              "id": "safebrowsing",
+              "title": {
+                "en": "Safe browsing",
+                "nl": "Veilig browsen"
+              }
+            },
+            {
+              "id": "querylog",
+              "title": {
+                "en": "Query log",
+                "nl": "Querylog"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "feature_turned_off",
+      "title": {
+        "en": "A feature was turned off",
+        "nl": "Een functie is uitgeschakeld"
+      },
+      "titleFormatted": {
+        "en": "[[feature]] was turned off",
+        "nl": "[[feature]] is uitgeschakeld"
+      },
+      "args": [
+        {
+          "type": "dropdown",
+          "name": "feature",
+          "title": {
+            "en": "Feature",
+            "nl": "Functie"
+          },
+          "values": [
+            {
+              "id": "filtering",
+              "title": {
+                "en": "Filter lists",
+                "nl": "Filterlijsten"
+              }
+            },
+            {
+              "id": "parental",
+              "title": {
+                "en": "Parental control",
+                "nl": "Ouderlijk toezicht"
+              }
+            },
+            {
+              "id": "safesearch",
+              "title": {
+                "en": "Safe search",
+                "nl": "Veilig zoeken"
+              }
+            },
+            {
+              "id": "safebrowsing",
+              "title": {
+                "en": "Safe browsing",
+                "nl": "Veilig browsen"
+              }
+            },
+            {
+              "id": "querylog",
+              "title": {
+                "en": "Query log",
+                "nl": "Querylog"
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "conditions": [
     {
       "id": "protection_condition",
       "title": {
-        "en": "Filtering is !{{enabled|disabled}}",
-        "nl": "Filtering is !{{ingeschakeld|uitgeschakeld}}"
+        "en": "Protection is !{{enabled|disabled}}",
+        "nl": "Bescherming is !{{ingeschakeld|uitgeschakeld}}"
       }
+    },
+    {
+      "id": "feature_condition",
+      "title": {
+        "en": "A feature is !{{on|off}}",
+        "nl": "Een functie is !{{aan|uit}}"
+      },
+      "titleFormatted": {
+        "en": "[[feature]] is !{{on|off}}",
+        "nl": "[[feature]] is !{{aan|uit}}"
+      },
+      "args": [
+        {
+          "type": "dropdown",
+          "name": "feature",
+          "title": {
+            "en": "Feature",
+            "nl": "Functie"
+          },
+          "values": [
+            {
+              "id": "filtering",
+              "title": {
+                "en": "Filter lists",
+                "nl": "Filterlijsten"
+              }
+            },
+            {
+              "id": "parental",
+              "title": {
+                "en": "Parental control",
+                "nl": "Ouderlijk toezicht"
+              }
+            },
+            {
+              "id": "safesearch",
+              "title": {
+                "en": "Safe search",
+                "nl": "Veilig zoeken"
+              }
+            },
+            {
+              "id": "safebrowsing",
+              "title": {
+                "en": "Safe browsing",
+                "nl": "Veilig browsen"
+              }
+            },
+            {
+              "id": "querylog",
+              "title": {
+                "en": "Query log",
+                "nl": "Querylog"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "domain_blocked",
+      "title": {
+        "en": "A domain is !{{blocked|not blocked}}",
+        "nl": "Een domein is !{{geblokkeerd|niet geblokkeerd}}"
+      },
+      "titleFormatted": {
+        "en": "[[domain]] is !{{blocked|not blocked}}",
+        "nl": "[[domain]] is !{{geblokkeerd|niet geblokkeerd}}"
+      },
+      "args": [
+        {
+          "type": "text",
+          "name": "domain",
+          "title": {
+            "en": "Domain",
+            "nl": "Domein"
+          },
+          "placeholder": {
+            "en": "example.com",
+            "nl": "voorbeeld.nl"
+          }
+        }
+      ]
     }
   ],
   "actions": [
     {
       "id": "enable_protection",
       "title": {
-        "en": "Enable filtering",
-        "nl": "Filtering inschakelen"
+        "en": "Enable protection",
+        "nl": "Bescherming inschakelen"
       }
     },
     {
       "id": "disable_protection",
       "title": {
-        "en": "Disable filtering",
-        "nl": "Filtering uitschakelen"
+        "en": "Disable protection",
+        "nl": "Bescherming uitschakelen"
       }
+    },
+    {
+      "id": "pause_protection",
+      "title": {
+        "en": "Pause protection for a while",
+        "nl": "Bescherming tijdelijk pauzeren"
+      },
+      "titleFormatted": {
+        "en": "Pause protection for [[minutes]] minutes",
+        "nl": "Bescherming [[minutes]] minuten pauzeren"
+      },
+      "hint": {
+        "en": "Protection turns back on by itself when the time is up.",
+        "nl": "Bescherming schakelt vanzelf weer in als de tijd om is."
+      },
+      "args": [
+        {
+          "type": "number",
+          "name": "minutes",
+          "title": {
+            "en": "Minutes",
+            "nl": "Minuten"
+          },
+          "min": 1,
+          "max": 1440,
+          "step": 1,
+          "placeholder": {
+            "en": "15",
+            "nl": "15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "feature_set",
+      "title": {
+        "en": "Turn a feature on or off",
+        "nl": "Een functie in- of uitschakelen"
+      },
+      "titleFormatted": {
+        "en": "Turn [[feature]] [[state]]",
+        "nl": "Zet [[feature]] [[state]]"
+      },
+      "args": [
+        {
+          "type": "dropdown",
+          "name": "feature",
+          "title": {
+            "en": "Feature",
+            "nl": "Functie"
+          },
+          "values": [
+            {
+              "id": "filtering",
+              "title": {
+                "en": "Filter lists",
+                "nl": "Filterlijsten"
+              }
+            },
+            {
+              "id": "parental",
+              "title": {
+                "en": "Parental control",
+                "nl": "Ouderlijk toezicht"
+              }
+            },
+            {
+              "id": "safesearch",
+              "title": {
+                "en": "Safe search",
+                "nl": "Veilig zoeken"
+              }
+            },
+            {
+              "id": "safebrowsing",
+              "title": {
+                "en": "Safe browsing",
+                "nl": "Veilig browsen"
+              }
+            },
+            {
+              "id": "querylog",
+              "title": {
+                "en": "Query log",
+                "nl": "Querylog"
+              }
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "state",
+          "title": {
+            "en": "State",
+            "nl": "Status"
+          },
+          "values": [
+            {
+              "id": "on",
+              "title": {
+                "en": "on",
+                "nl": "aan"
+              }
+            },
+            {
+              "id": "off",
+              "title": {
+                "en": "off",
+                "nl": "uit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "block_domain",
+      "title": {
+        "en": "Block a domain",
+        "nl": "Een domein blokkeren"
+      },
+      "titleFormatted": {
+        "en": "Block [[domain]]",
+        "nl": "Blokkeer [[domain]]"
+      },
+      "hint": {
+        "en": "Adds the custom rule ||domain^ (also blocks subdomains).",
+        "nl": "Voegt de eigen regel ||domein^ toe (blokkeert ook subdomeinen)."
+      },
+      "args": [
+        {
+          "type": "text",
+          "name": "domain",
+          "title": {
+            "en": "Domain",
+            "nl": "Domein"
+          },
+          "placeholder": {
+            "en": "example.com",
+            "nl": "voorbeeld.nl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "allow_domain",
+      "title": {
+        "en": "Always allow a domain",
+        "nl": "Een domein altijd toestaan"
+      },
+      "titleFormatted": {
+        "en": "Always allow [[domain]]",
+        "nl": "Sta [[domain]] altijd toe"
+      },
+      "hint": {
+        "en": "Adds the custom rule @@||domain^ (also allows subdomains).",
+        "nl": "Voegt de eigen regel @@||domein^ toe (staat ook subdomeinen toe)."
+      },
+      "args": [
+        {
+          "type": "text",
+          "name": "domain",
+          "title": {
+            "en": "Domain",
+            "nl": "Domein"
+          },
+          "placeholder": {
+            "en": "example.com",
+            "nl": "voorbeeld.nl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "remove_domain_rule",
+      "title": {
+        "en": "Remove block/allow rules for a domain",
+        "nl": "Blokkeer-/toestaanregels voor een domein verwijderen"
+      },
+      "titleFormatted": {
+        "en": "Remove block/allow rules for [[domain]]",
+        "nl": "Verwijder blokkeer-/toestaanregels voor [[domain]]"
+      },
+      "args": [
+        {
+          "type": "text",
+          "name": "domain",
+          "title": {
+            "en": "Domain",
+            "nl": "Domein"
+          },
+          "placeholder": {
+            "en": "example.com",
+            "nl": "voorbeeld.nl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "add_custom_rule",
+      "title": {
+        "en": "Add a custom filtering rule",
+        "nl": "Een eigen filterregel toevoegen"
+      },
+      "titleFormatted": {
+        "en": "Add custom rule [[rule]]",
+        "nl": "Voeg eigen regel [[rule]] toe"
+      },
+      "args": [
+        {
+          "type": "text",
+          "name": "rule",
+          "title": {
+            "en": "Rule",
+            "nl": "Regel"
+          },
+          "placeholder": {
+            "en": "||example.com^",
+            "nl": "||voorbeeld.nl^"
+          }
+        }
+      ]
+    },
+    {
+      "id": "remove_custom_rule",
+      "title": {
+        "en": "Remove a custom filtering rule",
+        "nl": "Een eigen filterregel verwijderen"
+      },
+      "titleFormatted": {
+        "en": "Remove custom rule [[rule]]",
+        "nl": "Verwijder eigen regel [[rule]]"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "rule",
+          "title": {
+            "en": "Rule",
+            "nl": "Regel"
+          }
+        }
+      ]
+    },
+    {
+      "id": "add_filter_list",
+      "title": {
+        "en": "Add a filter list",
+        "nl": "Een filterlijst toevoegen"
+      },
+      "titleFormatted": {
+        "en": "Add [[type]] [[name]] with URL [[url]]",
+        "nl": "Voeg [[type]] [[name]] toe met URL [[url]]"
+      },
+      "args": [
+        {
+          "type": "dropdown",
+          "name": "type",
+          "title": {
+            "en": "Type",
+            "nl": "Type"
+          },
+          "values": [
+            {
+              "id": "block",
+              "title": {
+                "en": "blocklist",
+                "nl": "blokkeerlijst"
+              }
+            },
+            {
+              "id": "allow",
+              "title": {
+                "en": "allowlist",
+                "nl": "toestaanlijst"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "name",
+          "title": {
+            "en": "Name",
+            "nl": "Naam"
+          },
+          "placeholder": {
+            "en": "My list",
+            "nl": "Mijn lijst"
+          }
+        },
+        {
+          "type": "text",
+          "name": "url",
+          "title": {
+            "en": "URL",
+            "nl": "URL"
+          },
+          "placeholder": {
+            "en": "https://example.com/list.txt",
+            "nl": "https://voorbeeld.nl/lijst.txt"
+          }
+        }
+      ]
+    },
+    {
+      "id": "remove_filter_list",
+      "title": {
+        "en": "Remove a filter list",
+        "nl": "Een filterlijst verwijderen"
+      },
+      "titleFormatted": {
+        "en": "Remove filter list [[list]]",
+        "nl": "Verwijder filterlijst [[list]]"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "list",
+          "title": {
+            "en": "Filter list",
+            "nl": "Filterlijst"
+          }
+        }
+      ]
+    },
+    {
+      "id": "set_filter_list",
+      "title": {
+        "en": "Turn a filter list on or off",
+        "nl": "Een filterlijst in- of uitschakelen"
+      },
+      "titleFormatted": {
+        "en": "Turn filter list [[list]] [[state]]",
+        "nl": "Zet filterlijst [[list]] [[state]]"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "list",
+          "title": {
+            "en": "Filter list",
+            "nl": "Filterlijst"
+          }
+        },
+        {
+          "type": "dropdown",
+          "name": "state",
+          "title": {
+            "en": "State",
+            "nl": "Status"
+          },
+          "values": [
+            {
+              "id": "on",
+              "title": {
+                "en": "on",
+                "nl": "aan"
+              }
+            },
+            {
+              "id": "off",
+              "title": {
+                "en": "off",
+                "nl": "uit"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "update_blocklists",
@@ -84,8 +726,15 @@
     {
       "id": "update_whitelists",
       "title": {
-        "en": "Update whitelists",
-        "nl": "Whitelists bijwerken"
+        "en": "Update allowlists",
+        "nl": "Allowlists bijwerken"
+      }
+    },
+    {
+      "id": "reset_stats",
+      "title": {
+        "en": "Reset statistics",
+        "nl": "Statistieken resetten"
       }
     }
   ]

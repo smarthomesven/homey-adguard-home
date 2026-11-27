@@ -1,0 +1,13 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Blocked by filters",
+    "nl": "Geblokkeerd door filters"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/filtering.svg"
+}
